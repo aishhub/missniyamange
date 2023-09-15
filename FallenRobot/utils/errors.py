@@ -1,10 +1,10 @@
 import sys
-import traceback
+import traceback, asyncio
 from functools import wraps
 
 from pyrogram.errors.exceptions.forbidden_403 import ChatWriteForbidden
 
-from FallenRobot import OWNER_ID, pbot
+from Nobita_X_Robot import OWNER_ID, pbot
 
 
 def split_limits(text):
@@ -24,6 +24,15 @@ def split_limits(text):
     result.append(small_msg)
 
     return result
+
+
+def asyncify(func):
+    async def inner(*args, **kwargs):
+        loop = asyncio.get_running_loop()
+        func_out = await loop.run_in_executor(None, func, *args, **kwargs)
+        return func_out
+
+    return inner
 
 
 def capture_err(func):
