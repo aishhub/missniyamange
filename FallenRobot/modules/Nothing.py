@@ -7,9 +7,9 @@ from PIL import Image, ImageChops, ImageDraw, ImageFont
 import textwrap
 from pyrogram import filters, Client
 from pyrogram.types import ChatMemberUpdated
-from Nobita_X_Robot import pbot as app
-from Nobita_X_Robot.utils.errors import capture_err, asyncify
-from Nobita_X_Robot.utils.utils import temp
+from FallenRobot import pbot as app
+from FallenRobot.utils.errors import capture_err, asyncify
+from FallenRobot.utils.utils import temp
 
 LOGGER = getLogger(__name__)
 
