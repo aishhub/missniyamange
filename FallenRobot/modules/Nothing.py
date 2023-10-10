@@ -38,8 +38,7 @@ def draw_multiple_line_text(image, text, font, text_start_height):
 def welcomepic(pic, user, chat, count, id):
     new_count = count + 1
 
-    background = Image.open("FallenRobot
-/resources/bg1.png")  # <- Background Image (Should be PNG)
+    background = Image.open("FallenRobot/resources/bg1.png")  # <- Background Image (Should be PNG)
     background = background.resize((1280, 720), Image.ANTIALIAS)
     pfp = Image.open(pic).convert("RGBA")
     pfp = circle(pfp)
